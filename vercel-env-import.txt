@@ -1,0 +1,5 @@
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+RESEND_FROM_EMAIL=website@sturdyoff.com
+PARTNERSHIP_TO_EMAIL=mgmt@sturdyoff.com
+# Optional (only if you want Google Sheet logging)
+# GSHEET_WEBHOOK_URL=https://script.google.com/macros/s/XXXXXXXXXXXX/exec
