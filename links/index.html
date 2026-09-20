@@ -26,7 +26,23 @@
 @media(max-width:360px){.hero-nav{padding:24px 20px}.hero-content{left:20px;right:20px}h1{font-size:46px}.content{padding-left:16px;padding-right:16px}.wordmark{font-size:10px;letter-spacing:2px}.location{font-size:8px}.offer{grid-template-columns:58px minmax(0,1fr) 16px;gap:10px;padding:10px}.offer-preview{height:80px}.offer-preview img{padding:9px}.video-body{padding:17px}.video-body h2{font-size:22px}.intro span{font-size:9px}}
 @media(prefers-reduced-motion:no-preference){.hero-content{animation:rise .8s var(--ease) both}.content{animation:rise .7s .1s var(--ease) backwards}@keyframes rise{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.offer:hover,.video-card:hover,.socials a:hover,.offer:active,.video-card:active,.offer:hover img,.video-card:hover .video-image img,.video-card:hover .play-circle,.offer:hover .arrow,.video-card:hover .arrow{transform:none}}
+/* The flight is a progressive enhancement: without motion or JavaScript, links stay immediate. */
+.flight,.flight-spacer{display:none}.journey-enabled .flight{display:block;position:fixed;inset:0;z-index:20;height:100svh;overflow:hidden;pointer-events:none;opacity:var(--flight-opacity,1);visibility:visible;color:#243738}.journey-enabled .flight-spacer{display:block;height:85svh}.journey-enabled .shell{opacity:var(--arrival-opacity,0)}
+.flight-scene{position:absolute;inset:0;background:#123544}.flight-scene img{width:100%;height:100%;object-fit:cover}.flight-city{position:absolute;inset:0;opacity:var(--city-opacity,0)}.flight-sky{position:absolute;inset:0;transform:scale(1.8);opacity:var(--sky-opacity,1)}
+.window-rim{position:absolute;left:50%;top:51%;width:clamp(260px,24vw,370px);height:65svh;max-height:570px;border-radius:46% / 35%;border:15px solid #919f9e;transform:translate(-50%,-50%) scale(var(--window-scale,1));box-shadow:inset 0 0 0 3px #243c48,inset 0 0 12px 7px #121f36aa,0 0 0 3px #ced9d8,0 0 0 8px #b0b9b5,0 0 0 10px #637a7b,0 0 0 26px #c4cdc7,0 0 0 28px #dfe5da,0 0 24px 43px #758989,0 0 0 160vmax #cbd2cc;will-change:transform}.window-rim::before{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:inset 9px 0 16px #ffffff32,inset -6px 0 13px #08203980}.window-rim::after{content:'';position:absolute;top:-8px;left:25%;right:25%;height:10px;border-radius:50%;background:linear-gradient(#566c70,#d8dfd7);box-shadow:0 4px 7px #16303966}
+.flight-copy{opacity:var(--copy-opacity,1);transform:translateY(var(--copy-y,0px));position:absolute;inset:0}.flight-nav{position:absolute;left:5%;right:5%;top:max(26px,env(safe-area-inset-top));display:flex;align-items:center;justify-content:space-between;font-size:10px;letter-spacing:2px;text-transform:uppercase}.flight-nav strong{font-weight:600}.seat-label{font-size:9px;letter-spacing:1.5px}.flight-title{position:absolute;left:7%;top:32%;font:500 clamp(42px,5.2vw,82px)/1.03 'Playfair Display',Georgia,serif;letter-spacing:-2px;max-width:32%}.flight-title em{display:block;font-weight:500;color:#496964}.flight-note{position:absolute;right:7%;top:61%;width:20%;font-size:13px;line-height:1.8}.flight-note strong{display:block;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}.flight-route{position:absolute;bottom:36px;left:5%;font-size:10px;letter-spacing:2px}.flight-route b{font-size:27px;font-weight:500;letter-spacing:3px;display:block;line-height:1.3}.flight-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;align-items:center;flex-direction:column;gap:10px;white-space:nowrap;font-size:10px;letter-spacing:1.4px;text-transform:uppercase}.flight-scroll svg{width:18px;height:18px;animation:scroll-hint 1.8s ease-in-out 3}.skip-flight{position:absolute;right:5%;bottom:35px;pointer-events:auto;font-size:11px;min-height:44px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #405b5a55}.skip-flight svg{width:15px;height:15px}.flight.finished{visibility:hidden}.flight.finished .skip-flight{pointer-events:none}.flight-spacer{pointer-events:none}
+.shell{position:relative;z-index:1}.hero-content{animation:none!important}.content{animation:none!important}.hero h1{font-size:clamp(45px,4.8vw,65px)}
+@keyframes scroll-hint{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media(max-width:760px){.window-rim{width:27svh;min-width:190px;max-width:250px;height:40svh;max-height:375px;top:53%;border-width:11px}.flight-nav{left:23px;right:23px;top:max(23px,env(safe-area-inset-top));font-size:9px;letter-spacing:1.6px}.seat-label{font-size:8px;letter-spacing:1px}.flight-title{left:0;right:0;top:12%;text-align:center;max-width:none;font-size:clamp(36px,6.4svh,54px);letter-spacing:-1.7px}.flight-title em{display:inline}.flight-note{top:auto;bottom:13%;right:0;width:100%;text-align:center;font-size:11px;padding:0 24px}.flight-note strong{display:none}.flight-route{left:23px;bottom:25px;font-size:7px;letter-spacing:1px}.flight-route b{font-size:20px}.flight-scroll{bottom:28px;font-size:8px;gap:7px;letter-spacing:1px}.skip-flight{right:23px;bottom:20px;font-size:9px;gap:5px}.skip-flight svg{width:12px}.hero{height:390px}.hero-content{bottom:39px}.hero-nav{padding:22px 24px}.hero h1{font-size:45px}.hero-description{font-size:12px;margin-top:12px;max-width:310px}.hero .eyebrow{font-size:7px;margin-bottom:12px;letter-spacing:1.8px}.identity{margin-top:17px}.portrait{width:40px;height:40px}.socials{position:absolute;bottom:0;right:0;gap:6px;margin:0}.socials a{width:35px;height:35px}.socials svg{width:15px;height:15px}.identity small{display:none}.identity strong{font-size:12px}.city{object-position:50% 43%}}
+@media(max-width:360px){.hero h1{font-size:40px}.hero-nav{padding:22px 20px}.hero-content{left:20px;right:20px}.identity{gap:8px}.socials{gap:5px}.socials a{width:31px;height:31px}.flight-scroll{font-size:7px}.skip-flight{right:18px}.flight-route{left:18px}}
+@media(max-height:580px) and (min-width:761px){.window-rim{height:55svh}.flight-title{font-size:40px}.flight-note{font-size:11px}.flight-route,.flight-scroll{bottom:22px}}
+@media(prefers-reduced-motion:reduce){.journey-enabled .flight,.journey-enabled .flight-spacer{display:none}.journey-enabled .shell{opacity:1}}
 </style></head><body>
+<section class="flight" aria-label="Your window seat to Bangkok">
+<div class="flight-scene" aria-hidden="true"><img class="flight-city" src="https://images.unsplash.com/photo-1573047330199-9a915400744f?auto=format&amp;fit=crop&amp;w=1600&amp;q=85" alt="" width="1200" height="1800"><img class="flight-sky" src="https://images.unsplash.com/photo-1706016136865-52d211b0335b?auto=format&amp;fit=crop&amp;w=1600&amp;q=85" alt="" width="1600" height="2490" fetchpriority="high"></div>
+<div class="window-rim" aria-hidden="true"></div>
+<div class="flight-copy"><div class="flight-nav"><strong>Jordan Green</strong><span class="seat-label">Your window seat · 01A</span></div><p class="flight-title">A different view.<br><em>A bigger life.</em></p><p class="flight-note"><strong>Next stop. A new perspective.</strong>Money, freedom &amp; a life in Bangkok.</p><div class="flight-route"><b>BKK</b>Bangkok, Thailand</div><div class="flight-scroll">Scroll to land<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 3v17m-6-6 6 6 6-6"/></svg></div><a class="skip-flight" href="#links">Skip to links <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></div>
+</section><div class="flight-spacer" aria-hidden="true"></div>
 <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
 <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="play" viewBox="0 0 24 24"><path d="m6 3 15 9-15 9z" fill="currentColor"/></symbol>
@@ -35,11 +51,11 @@
 <symbol id="facebook" viewBox="0 0 24 24"><path d="M14 21v-8h3l.5-4H14V7c0-1 .5-2 2-2h2V2h-3c-3 0-5 2-5 5v2H7v4h3v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
 <symbol id="youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></symbol>
 </defs></svg>
-<main class="shell" data-design="bangkok-editorial-v1">
+<main class="shell" id="links" tabindex="-1" data-design="bangkok-flight-v2">
 <header class="hero">
 <img class="city" src="https://images.unsplash.com/photo-1573047330199-9a915400744f?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Bangkok city lights from a rooftop terrace" width="1200" height="1800" fetchpriority="high">
 <div class="hero-nav"><span class="wordmark">JORDAN GREEN</span><span class="location">Bangkok, Thailand</span></div>
-<div class="hero-content"><p class="eyebrow">Money · Business · Personal Finance</p><h1>A bigger life.<em>A different city.</em></h1><p class="hero-description">Bangkok is home. I share the money moves, business ideas and everyday finds behind my life here.</p>
+<div class="hero-content"><p class="eyebrow">Money · Business · Personal Finance</p><h1>You've arrived.<em>Welcome to Bangkok.</em></h1><p class="hero-description">City lights. New possibilities. I'm Jordan — sharing the money moves, ideas and finds behind my life in Thailand.</p>
 <div class="identity"><img class="portrait" src="../assets/images/hero-updated.jpg" alt="Jordan Green" width="49" height="49"><div><strong>I'm Jordan.</strong><small>Building a life with more freedom.</small></div></div>
 <nav class="socials" aria-label="Follow Jordan"><a href="https://www.instagram.com/jordangreenai/" aria-label="Instagram"><svg aria-hidden="true"><use href="#instagram"/></svg></a><a href="https://www.tiktok.com/@jaystips" aria-label="TikTok"><svg aria-hidden="true"><use href="#tiktok"/></svg></a><a href="https://www.facebook.com/profile.php?id=1566124490" aria-label="Facebook"><svg aria-hidden="true"><use href="#facebook"/></svg></a><a href="https://www.youtube.com/channel/UC1iAMqIpXuWCgRCeULWcxcQ/" aria-label="YouTube"><svg aria-hidden="true"><use href="#youtube"/></svg></a></nav></div>
 <a class="city-credit" href="https://unsplash.com/photos/dwfxic8nAQ8">City photo: Zion C / Unsplash</a>
@@ -54,4 +70,49 @@
 <a class="offer" href="https://go.skimresources.com?id=202957X1681842&amp;xs=1&amp;url=https%3A%2F%2Fwww.airalo.com%2Fesim" rel="sponsored"><span class="offer-preview esim"><img src="https://cdn-revamp.airalo.com/img/logo-homepage-header.png" alt="Airalo" width="76" height="85" loading="lazy"></span><span><span class="offer-label">Land connected</span><strong>Get an eSIM for your trip</strong><small>Explore data plans with Airalo.</small></span><svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a>
 </nav><p class="disclosure">Some links are affiliate links. I may earn a commission if you use them.</p></section>
 <footer class="outro"><strong>Jordan Green</strong><span>A little more freedom. A lot more life.</span></footer></div></main>
+<script>
+(() => {
+  const root = document.documentElement;
+  const flight = document.querySelector('.flight');
+  const spacer = document.querySelector('.flight-spacer');
+  const main = document.querySelector('main');
+  const skip = document.querySelector('.skip-flight');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const clamp = value => Math.max(0, Math.min(1, value));
+  let distance = 1, queued = false;
+  function render() {
+    queued = false;
+    const p = reduced.matches ? 1 : clamp(window.scrollY / distance);
+    const zoom = p * p;
+    root.style.setProperty('--window-scale', (1 + zoom * 9).toFixed(4));
+    root.style.setProperty('--copy-opacity', (1 - clamp(p / .28)).toFixed(3));
+    root.style.setProperty('--copy-y', (-p * 45).toFixed(1) + 'px');
+    root.style.setProperty('--sky-opacity', (1 - clamp((p - .2) / .38)).toFixed(3));
+    root.style.setProperty('--city-opacity', clamp((p - .15) / .3).toFixed(3));
+    root.style.setProperty('--flight-opacity', (1 - clamp((p - .58) / .38)).toFixed(3));
+    root.style.setProperty('--arrival-opacity', clamp((p - .55) / .36).toFixed(3));
+    flight.classList.toggle('finished', p >= .99);
+    flight.inert = p > .3;
+    main.inert = p < .65;
+  }
+  function measure() {
+    root.classList.toggle('journey-enabled', !reduced.matches);
+    distance = Math.max(1, spacer.offsetHeight);
+    render();
+  }
+  addEventListener('scroll', () => {
+    if (!queued) { queued = true; requestAnimationFrame(render); }
+  }, { passive: true });
+  addEventListener('resize', measure, { passive: true });
+  addEventListener('pageshow', measure);
+  reduced.addEventListener('change', measure);
+  skip.addEventListener('click', event => {
+    event.preventDefault();
+    window.scrollTo({ top: distance, behavior: 'instant' });
+    render();
+    main.focus({ preventScroll: true });
+  });
+  measure();
+})();
+</script>
 </body></html>
